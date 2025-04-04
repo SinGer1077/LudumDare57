@@ -491,6 +491,9 @@ GameObject:
   - component: {fileID: 558426471}
   - component: {fileID: 558426470}
   - component: {fileID: 558426469}
+  - component: {fileID: 558426474}
+  - component: {fileID: 558426473}
+  - component: {fileID: 558426472}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -629,6 +632,77 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 558426467}
   m_CullTransparentMesh: 1
+--- !u!114 &558426472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 558426467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b567ee3c06b6f474e849c6a79cdada33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onDragEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 558426469}
+        m_TargetAssemblyTypeName: TestScript, Assembly-CSharp
+        m_MethodName: UnscaleText
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &558426473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 558426467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebe7214b381127f43b64e0bdc6ee261f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onDrag:
+    m_PersistentCalls:
+      m_Calls: []
+  _rectTransform: {fileID: 558426468}
+  _canvas: {fileID: 188654980}
+--- !u!114 &558426474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 558426467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34624be4808257a429809978eb59cae3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _onDragBegin:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 558426469}
+        m_TargetAssemblyTypeName: TestScript, Assembly-CSharp
+        m_MethodName: ScaleText
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
