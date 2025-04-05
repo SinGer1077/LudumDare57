@@ -15,17 +15,20 @@ public class AntWorker : Ant
 
     public float Strength;
 
-    public void SetMatrix(GenerateMatrix matrix, RectTransform parent)
+    private Vector2 IndexesToBegin;
+
+    public void SetMatrix(GenerateMatrix matrix, RectTransform parent, Vector2 indexes)
     {
         Matrix = matrix;
         Parent = parent;
+        IndexesToBegin = indexes;
     }
 
     public void SetPath(int x, int y)
     {
         Vector2 posToMove = new Vector2(Matrix.LevelMatrix[x, y].Position.x + Parent.rect.position.x,
             Matrix.LevelMatrix[x, y].Position.y - Parent.rect.position.y);
-        Rect.DOLocalMove(posToMove, 2.0f);       
+        Rect.DOLocalMove(posToMove, 1.0f);       
     }
 
     public void DestroyBlock(Block block)

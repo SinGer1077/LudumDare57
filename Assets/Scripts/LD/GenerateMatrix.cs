@@ -55,7 +55,11 @@ public class GenerateMatrix : MonoBehaviour
             for (int j = 0; j < LevelMatrix.GetLength(1); j++)
             {
                 var block = Instantiate(LevelMatrix[i, j].block, transform);
-                //block.transform.localScale = new Vector3(Grid.cellSize.x, Grid.cellSize.y, 1.0f);
+                
+                if (j == (int)(Size.x / 2) && i == 0)
+                {
+                    block.ChangeDurability(1.0f);
+                }
 
                 float x = Grid.padding.left + i * (Grid.cellSize.x + Grid.spacing.x) + Grid.cellSize.x / 2.0f;
                 float y = -Grid.padding.top - j * (Grid.cellSize.y + Grid.spacing.y) - Grid.cellSize.y / 2.0f;
