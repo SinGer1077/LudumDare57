@@ -28,7 +28,7 @@ public class AntQueen : Ant, IPointerClickHandler
             case AntType.Junior:
                 var ant = Instantiate(Workers[0], transform.position, Quaternion.identity, WorkersContainer);
                 ant.SetMatrix(Matrix, WorkersContainer, new Vector2((int)Matrix.Size.x / 2, 0));
-                ant.SetPath((int)Matrix.Size.x / 2, 0);
+                ant.SetPath((int)Matrix.Size.x / 2, 0, true);
                 break;
         }
     }    

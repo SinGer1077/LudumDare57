@@ -2,28 +2,33 @@ using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using System.Collections;
 
 public class AntWorker : Ant
 {
     [SerializeField]
-    private RectTransform Rect;
+    protected RectTransform Rect;
 
-    private GenerateMatrix Matrix;
+    protected GenerateMatrix Matrix;
 
-    private RectTransform Parent;
+    protected RectTransform Parent;
 
     public AntType Grade;
 
     public float Strength;
 
-    private Vector2 IndexesToBegin;
+    protected Vector2 IndexesToBegin;
+    protected int currentX, currentY;
 
     private bool Chosen;
 
-    private InputManager InputManager;
+    protected InputManager InputManager;
+
+    protected Vector2 targetPos;
+    protected int targetX, targetY;
 
     [SerializeField]
-    private Image Aura;
+    protected Image Aura;
 
     private void Start()
     {
@@ -37,12 +42,27 @@ public class AntWorker : Ant
         IndexesToBegin = indexes;
     }
 
-    public void SetPath(int x, int y)
+    public Vector2 CalculatePosWithCoord(int x, int y)
     {
-        Vector2 posToMove = new Vector2(Matrix.LevelMatrix[x, y].Position.x + Parent.rect.position.x,
-            Matrix.LevelMatrix[x, y].Position.y - Parent.rect.position.y);
-        Rect.DOLocalMove(posToMove, 1.0f);       
+        return new Vector2(Matrix.LevelMatrix[x, y].Position.x + Parent.rect.position.x,
+           Matrix.LevelMatrix[x, y].Position.y - Parent.rect.position.y);
     }
+
+    public void SetPath(int x, int y, bool justMove)
+    {        
+        if (justMove) 
+        {
+            targetPos = CalculatePosWithCoord(x, y);
+            var move = Rect.DOLocalMove(targetPos, 0.5f);
+        }
+        else
+        {
+            targetX = x; targetY = y;
+            GoToTarget();
+        }            
+    }    
+
+    public virtual void GoToTarget() { }
 
     public void DestroyBlock(Block block)
     {
@@ -60,7 +80,8 @@ public class AntWorker : Ant
             if (!Chosen)
             {
                 Chosen = true;
-                InputManager.CurrentChosenAnt = this;
+
+                InputManager.SelectAnt(this);
                 var aura = Aura.color;
                 aura.a = 1.0f;
                 Aura.color = aura;
@@ -68,7 +89,7 @@ public class AntWorker : Ant
             else
             {
                 Chosen = false;
-                InputManager.CurrentChosenAnt = null;
+                InputManager.UnselectAnt();
                 var aura = Aura.color;
                 aura.a = 0.0f;
                 Aura.color = aura;

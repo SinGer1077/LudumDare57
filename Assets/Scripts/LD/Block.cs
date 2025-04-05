@@ -35,17 +35,15 @@ public class Block : MonoBehaviour, IPointerClickHandler
     {
         if (eventData.button == PointerEventData.InputButton.Right)
         {
-            Debug.Log("Clicked");
             if (InputManager.CurrentBlock != this)
             {
                 if (InputManager.CurrentBlock != null)
                     InputManager.CurrentBlock.clickCount = 0;
                 InputManager.CurrentBlock = this;
-                Debug.Log("Other");
             }
             else
             {
-                Debug.Log("Same");
+
             }
 
             clickCount++;
@@ -54,9 +52,8 @@ public class Block : MonoBehaviour, IPointerClickHandler
                 InputManager.CurrentBlock.clickCount = 0;
                 if (InputManager.CurrentChosenAnt != null)
                 {
-                    InputManager.CurrentChosenAnt.SetPath(y ,x);
+                    InputManager.CurrentChosenAnt.SetPath(y ,x, false);
                 }
-                Debug.Log("Go");
             }
         }
     }
