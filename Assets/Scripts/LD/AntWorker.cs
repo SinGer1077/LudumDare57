@@ -23,8 +23,9 @@ public class AntWorker : Ant
 
     public void SetPath(int x, int y)
     {
-        //Rect.DOLocalMove(Matrix.LevelMatrix[x, y].Position - new Vector2(Parent.position.x, Parent.position.y), 2.0f);
-        Rect.localPosition = Matrix.LevelMatrix[x, y].Position;
+        Vector2 posToMove = new Vector2(Matrix.LevelMatrix[x, y].Position.x + Parent.rect.position.x,
+            Matrix.LevelMatrix[x, y].Position.y - Parent.rect.position.y);
+        Rect.DOLocalMove(posToMove, 2.0f);       
     }
 
     public void DestroyBlock(Block block)
