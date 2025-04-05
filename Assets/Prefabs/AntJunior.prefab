@@ -167,9 +167,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Energy: 5
   Rect: {fileID: 294824928318167498}
+  AntCost: 3
   Grade: 0
   Strength: 1
   Aura: {fileID: 7751017170725919997}
+  Interactable: 0
 --- !u!1 &7852657467702258753
 GameObject:
   m_ObjectHideFlags: 0

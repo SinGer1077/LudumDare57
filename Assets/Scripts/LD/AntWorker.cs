@@ -9,6 +9,8 @@ public class AntWorker : Ant
     [SerializeField]
     protected RectTransform Rect;
 
+    public float AntCost;
+
     protected GenerateMatrix Matrix;
 
     protected RectTransform Parent;
