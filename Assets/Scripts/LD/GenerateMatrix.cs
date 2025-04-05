@@ -31,7 +31,7 @@ public class GenerateMatrix : MonoBehaviour
         {
             for (int j = 0; j < LevelMatrix.GetLength(1); j++)
             {
-                LevelMatrix[i, j] = new LevelBlock(BlockPossibleTypes[Mathf.CeilToInt(UnityEngine.Random.Range(0, BlockPossibleTypes.Length))]);
+                LevelMatrix[i, j] = new LevelBlock();
             }
         }
     }
@@ -56,10 +56,11 @@ public class GenerateMatrix : MonoBehaviour
         {
             for (int j = 0; j < LevelMatrix.GetLength(1); j++)
             {
-                var block = Instantiate(LevelMatrix[i, j].block, transform);
+                var block = Instantiate(BlockPossibleTypes[Mathf.CeilToInt(UnityEngine.Random.Range(0, BlockPossibleTypes.Length))], transform);
                 block.InputManager = Input;
                 block.x = i; block.y = j;
-                
+                LevelMatrix[i, j].block = block;
+
                 if (j == (int)(Size.x / 2) && i == 0)
                 {
                     block.ChangeDurability(1.0f);

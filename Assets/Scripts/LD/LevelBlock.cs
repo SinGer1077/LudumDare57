@@ -6,9 +6,9 @@ public class LevelBlock
 
     public Vector2 Position;
 
-    public LevelBlock(Block type)
+    public LevelBlock()
     {
-        block = type;
+        //block = type;
     }
 
 }

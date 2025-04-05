@@ -9,6 +9,8 @@ public class AntJunior : AntWorker
         int byX = Mathf.Abs((int)IndexesToBegin.x - targetX);
         int byY = Mathf.Abs((int)IndexesToBegin.y - targetY);
 
+        Interactable = false;
+
         StartCoroutine(MoveInSteps(byX, byY));
     }
 
@@ -26,6 +28,8 @@ public class AntJunior : AntWorker
             Rect.DOLocalMove(CalculatePosWithCoord(x, y), 1.0f);
 
             yield return new WaitForSeconds(1.0f);
+
+            DestroyBlock(Matrix.LevelMatrix[y, x].block);
         }
         for (int i = 0; i < ySteps; i++)
         {
@@ -36,9 +40,12 @@ public class AntJunior : AntWorker
 
             Rect.DOLocalMove(CalculatePosWithCoord(targetX, y), 1.0f);
 
+            DestroyBlock(Matrix.LevelMatrix[y, x].block);
             yield return new WaitForSeconds(1.0f);
         }
 
         IndexesToBegin = new Vector2(targetX, targetY);
+        Interactable = true;
+
     }
 }

@@ -53,7 +53,7 @@ MonoBehaviour:
   Durability: 1
   image: {fileID: 3953223850753992503}
   DefaultDurability: 0
-  Destroyed: 0
+  Destroyed: 1
   clickCount: 0
   InputManager: {fileID: 0}
   x: 0

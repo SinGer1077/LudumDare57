@@ -8,7 +8,7 @@ public class Ant : MonoBehaviour, IPointerClickHandler
 
     private float DefaultEnergy;
 
-    private void Start()
+    public virtual void Start()
     {
         DefaultEnergy = Energy;
     }
@@ -25,6 +25,7 @@ public class Ant : MonoBehaviour, IPointerClickHandler
     public virtual void Die()
     {
         Debug.Log("Ant is dead(");
+        Destroy(gameObject);
     }
 
     public virtual void OnPointerClick(PointerEventData eventData)

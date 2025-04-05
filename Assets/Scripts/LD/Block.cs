@@ -62,8 +62,7 @@ public class Block : MonoBehaviour, IPointerClickHandler
     {
         Durability = Mathf.Clamp(Durability - value, 0.0f, DefaultDurability);        
         if (Durability <= 0.0f)
-        {
-            image.color = new Color(image.color.r, image.color.g, image.color.b, 0.0f);
+        {            
             DestroyBlock();
         }
     }
@@ -71,5 +70,9 @@ public class Block : MonoBehaviour, IPointerClickHandler
     public void DestroyBlock()
     {
         Destroyed = true;
+
+        var color = image.color;
+        color.a = 0.0f;
+        image.color = color;
     }
 }

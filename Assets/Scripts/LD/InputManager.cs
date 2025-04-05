@@ -10,12 +10,20 @@ public class InputManager : MonoBehaviour
 
     public void SelectAnt(AntWorker worker)
     {
-        CurrentChosenAnt = worker;
+        if (CurrentChosenAnt != worker)
+        {
+            UnselectAnt();
+            CurrentChosenAnt = worker;
+            CurrentChosenAnt.UpdateAura(true);
+        }
     }
 
     public void UnselectAnt()
     {
-        CurrentChosenAnt = null;
+        if (CurrentChosenAnt != null)
+        {
+            CurrentChosenAnt.UpdateAura(false);
+            CurrentChosenAnt = null;
+        }
     }
-
 }

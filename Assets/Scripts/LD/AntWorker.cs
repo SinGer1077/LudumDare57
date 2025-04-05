@@ -30,9 +30,14 @@ public class AntWorker : Ant
     [SerializeField]
     protected Image Aura;
 
-    private void Start()
+    [HideInInspector]
+    public bool Interactable;
+
+    public override void Start()
     {
+        base.Start();
         InputManager = FindFirstObjectByType<InputManager>();
+        Interactable = true;
     }
 
     public void SetMatrix(GenerateMatrix matrix, RectTransform parent, Vector2 indexes)
@@ -57,6 +62,7 @@ public class AntWorker : Ant
         }
         else
         {
+            InputManager.UnselectAnt();
             targetX = x; targetY = y;
             GoToTarget();
         }            
@@ -75,25 +81,38 @@ public class AntWorker : Ant
 
     public override void OnPointerClick(PointerEventData eventData)
     {
+        if (!Interactable)
+            return;
+
         if (eventData.button == 0)
         {
             if (!Chosen)
             {
                 Chosen = true;
 
-                InputManager.SelectAnt(this);
-                var aura = Aura.color;
-                aura.a = 1.0f;
-                Aura.color = aura;
+                InputManager.SelectAnt(this);                
             }
             else
             {
                 Chosen = false;
-                InputManager.UnselectAnt();
-                var aura = Aura.color;
-                aura.a = 0.0f;
-                Aura.color = aura;
+                InputManager.UnselectAnt();                
             }
+        }
+    }
+
+    public void UpdateAura(bool flag)
+    {
+        if (flag)
+        {
+            var aura = Aura.color;
+            aura.a = 1.0f;
+            Aura.color = aura;
+        }
+        else
+        {
+            var aura = Aura.color;
+            aura.a = 0.0f;
+            Aura.color = aura;
         }
     }
 
