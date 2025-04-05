@@ -54,6 +54,10 @@ MonoBehaviour:
   image: {fileID: 3953223850753992503}
   DefaultDurability: 0
   Destroyed: 0
+  clickCount: 0
+  InputManager: {fileID: 0}
+  x: 0
+  y: 0
 --- !u!222 &591073176148124614
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -76,7 +80,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.5345911, g: 0.2034135, b: 0.2034135, a: 1}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:

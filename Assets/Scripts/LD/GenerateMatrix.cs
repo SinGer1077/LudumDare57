@@ -15,6 +15,8 @@ public class GenerateMatrix : MonoBehaviour
     [SerializeField]
     private GridLayoutGroup Grid;
 
+    [SerializeField]
+    private InputManager Input;
 
     private void Awake()
     {
@@ -55,6 +57,8 @@ public class GenerateMatrix : MonoBehaviour
             for (int j = 0; j < LevelMatrix.GetLength(1); j++)
             {
                 var block = Instantiate(LevelMatrix[i, j].block, transform);
+                block.InputManager = Input;
+                block.x = i; block.y = j;
                 
                 if (j == (int)(Size.x / 2) && i == 0)
                 {

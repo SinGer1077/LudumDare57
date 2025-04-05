@@ -15,7 +15,7 @@ public class AntQueen : Ant, IPointerClickHandler
 
 
 
-    public void OnPointerClick(PointerEventData eventData)
+    public override void OnPointerClick(PointerEventData eventData)
     {
         SummonAnt(AntType.Junior);
     }

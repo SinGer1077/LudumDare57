@@ -1,6 +1,8 @@
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class Ant : MonoBehaviour
+public class Ant : MonoBehaviour, IPointerClickHandler
 {
     public float Energy;
 
@@ -23,5 +25,10 @@ public class Ant : MonoBehaviour
     public virtual void Die()
     {
         Debug.Log("Ant is dead(");
+    }
+
+    public virtual void OnPointerClick(PointerEventData eventData)
+    {
+
     }
 }
