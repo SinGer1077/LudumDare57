@@ -6,6 +6,8 @@ public class LevelBlock
 
     public Vector2 Position;
 
+    public Fruit Fruited;
+
     public LevelBlock()
     {
         //block = type;

@@ -19,7 +19,6 @@ public class AntQueen : Ant, IPointerClickHandler
     private void FixedUpdate()
     {
         SpendEnergy(EnergyByDeltaTime);
-        Debug.Log(Energy);
     }
 
     public override void OnPointerClick(PointerEventData eventData)
@@ -34,9 +33,9 @@ public class AntQueen : Ant, IPointerClickHandler
         {
             case AntType.Junior:
                 var ant = Instantiate(Workers[0], transform.position, Quaternion.identity, WorkersContainer);
+                ant.Queen = this;
                 ant.SetMatrix(Matrix, WorkersContainer, new Vector2((int)Matrix.Size.x / 2, 0));
-                ant.SetPath((int)Matrix.Size.x / 2, 0, true);
-
+                ant.SetPath((int)Matrix.Size.x / 2, 0, true);                
                 SpendEnergy(ant.AntCost);
                 break;
         }

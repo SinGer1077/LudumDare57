@@ -25,6 +25,7 @@ public class AntWorker : Ant
     private bool Chosen;
 
     protected InputManager InputManager;
+    protected FruitManager FruitManager;
 
     protected Vector2 targetPos;
     protected int targetX, targetY;
@@ -35,10 +36,14 @@ public class AntWorker : Ant
     [HideInInspector]
     public bool Interactable;
 
+    [HideInInspector]
+    public AntQueen Queen;
+
     public override void Start()
     {
         base.Start();
         InputManager = FindFirstObjectByType<InputManager>();
+        FruitManager = FindFirstObjectByType<FruitManager>();
         Interactable = true;
     }
 
@@ -47,6 +52,7 @@ public class AntWorker : Ant
         Matrix = matrix;
         Parent = parent;
         IndexesToBegin = indexes;
+        currentX = (int)indexes.x; currentY = (int)indexes.y;
     }
 
     public Vector2 CalculatePosWithCoord(int x, int y)
@@ -115,6 +121,17 @@ public class AntWorker : Ant
             var aura = Aura.color;
             aura.a = 0.0f;
             Aura.color = aura;
+        }
+    }
+
+    public void CheckForFruit(int x, int y)
+    {
+        Debug.Log(x + " " + y + " " + Matrix.LevelMatrix[x, y].Fruited);
+        if (Matrix.LevelMatrix[x, y].Fruited != null)
+        {
+            Debug.Log("FOUNDED!!!");
+            Queen.SpendEnergy(-Matrix.LevelMatrix[x, y].Fruited.EnergyRestore);
+            FruitManager.FruitFounded(Matrix.LevelMatrix[x, y].Fruited);
         }
     }
 

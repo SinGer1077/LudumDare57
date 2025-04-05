@@ -6,8 +6,8 @@ public class AntJunior : AntWorker
 {
     public override void GoToTarget()
     {
-        int byX = Mathf.Abs((int)IndexesToBegin.x - targetX);
-        int byY = Mathf.Abs((int)IndexesToBegin.y - targetY);
+        int byX = Mathf.Abs(currentX - targetX);
+        int byY = Mathf.Abs(currentY - targetY);
 
         Interactable = false;
 
@@ -16,8 +16,8 @@ public class AntJunior : AntWorker
 
     private IEnumerator MoveInSteps(int xSteps, int ySteps)
     {
-        int x = (int)IndexesToBegin.x;
-        int y = (int)IndexesToBegin.y;
+        int x = currentX;
+        int y = currentY;
         for (int i = 0; i < xSteps; i++)
         {
             if ((int)IndexesToBegin.x > targetX)
@@ -30,6 +30,7 @@ public class AntJunior : AntWorker
             yield return new WaitForSeconds(1.0f);
 
             DestroyBlock(Matrix.LevelMatrix[y, x].block);
+            CheckForFruit(y ,x);
         }
         for (int i = 0; i < ySteps; i++)
         {
@@ -41,11 +42,11 @@ public class AntJunior : AntWorker
             Rect.DOLocalMove(CalculatePosWithCoord(targetX, y), 1.0f);
 
             DestroyBlock(Matrix.LevelMatrix[y, x].block);
+            CheckForFruit(y ,x);
             yield return new WaitForSeconds(1.0f);
         }
 
-        IndexesToBegin = new Vector2(targetX, targetY);
+        currentX = targetX;  currentY = targetY;
         Interactable = true;
-
     }
 }

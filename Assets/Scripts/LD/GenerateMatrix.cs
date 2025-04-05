@@ -18,6 +18,9 @@ public class GenerateMatrix : MonoBehaviour
     [SerializeField]
     private InputManager Input;
 
+    [SerializeField]
+    private FruitManager FruitManager;
+
     private void Awake()
     {
         LevelMatrix = new LevelBlock[(int)Size.x, (int)Size.y];
@@ -72,7 +75,6 @@ public class GenerateMatrix : MonoBehaviour
             }
         }
 
-
-
+        FruitManager.ShuffleFruits();
     }
 }
