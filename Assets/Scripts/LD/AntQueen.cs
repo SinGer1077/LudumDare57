@@ -11,7 +11,10 @@ public class AntQueen : Ant, IPointerClickHandler
     private RectTransform SpawnPoint;
 
     [SerializeField]
-    private Transform WorkersContainer;
+    private RectTransform WorkersContainer;
+
+    [SerializeField]
+    private GenerateMatrix Matrix;
 
     public void OnPointerClick(PointerEventData eventData)
     {
@@ -23,7 +26,10 @@ public class AntQueen : Ant, IPointerClickHandler
         switch (type)
         {
             case AntType.Junior:
-                Instantiate(Workers[0], SpawnPoint.position, Quaternion.identity, WorkersContainer);
+                var ant = Instantiate(Workers[0], SpawnPoint.position, Quaternion.identity, WorkersContainer);
+                Debug.Log(WorkersContainer.localPosition);
+                ant.SetMatrix(Matrix, WorkersContainer);
+                ant.SetPath(0, 0);
                 break;
         }
     }    
