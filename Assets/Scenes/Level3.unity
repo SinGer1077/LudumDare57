@@ -389,6 +389,26 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 330585545}
+    - target: {fileID: 773966254714857037, guid: e24194edcd60bc741bc1daa8f1e5494a, type: 3}
+      propertyPath: Energy
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 2200077908192863925, guid: e24194edcd60bc741bc1daa8f1e5494a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2472238714079091711, guid: e24194edcd60bc741bc1daa8f1e5494a, type: 3}
+      propertyPath: Size.x
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2472238714079091711, guid: e24194edcd60bc741bc1daa8f1e5494a, type: 3}
+      propertyPath: Size.y
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3225256597404733368, guid: e24194edcd60bc741bc1daa8f1e5494a, type: 3}
+      propertyPath: FruitsCountOnLvl
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3975767263128152470, guid: e24194edcd60bc741bc1daa8f1e5494a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -440,6 +460,18 @@ PrefabInstance:
     - target: {fileID: 6635738031320712036, guid: e24194edcd60bc741bc1daa8f1e5494a, type: 3}
       propertyPath: m_Name
       value: LevelSetup
+      objectReference: {fileID: 0}
+    - target: {fileID: 7655713011721881394, guid: e24194edcd60bc741bc1daa8f1e5494a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939145204702427374, guid: e24194edcd60bc741bc1daa8f1e5494a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8636554188964985251, guid: e24194edcd60bc741bc1daa8f1e5494a, type: 3}
+      propertyPath: indexThis
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

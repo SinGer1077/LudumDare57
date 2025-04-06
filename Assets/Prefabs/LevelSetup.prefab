@@ -1088,8 +1088,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8636554188964985251}
         m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
-        m_MethodName: LevelLoad
-        m_Mode: 3
+        m_MethodName: LevelNextLoad
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1589,6 +1589,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97a625b2177e10d4ebbd037deabb9ae0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  indexThis: 0
+  indexNext: 0
 --- !u!1 &5924498574644104168
 GameObject:
   m_ObjectHideFlags: 0
@@ -1932,8 +1934,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8636554188964985251}
         m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
-        m_MethodName: LevelLoad
-        m_Mode: 3
+        m_MethodName: LevelThisLoad
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2140,8 +2142,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8636554188964985251}
         m_TargetAssemblyTypeName: LevelLoader, Assembly-CSharp
-        m_MethodName: LevelLoad
-        m_Mode: 3
+        m_MethodName: LevelThisLoad
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

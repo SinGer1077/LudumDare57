@@ -3,8 +3,19 @@ using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour
 {
-    public void LevelLoad(int buildIndex)
+    [SerializeField]
+    private int indexThis;
+
+    [SerializeField]
+    private int indexNext;
+
+    public void LevelThisLoad()
     {
-        SceneManager.LoadSceneAsync(buildIndex);
+        SceneManager.LoadSceneAsync(indexThis);
+    }
+
+    public void LevelNextLoad()
+    {
+        SceneManager.LoadSceneAsync(indexNext);
     }
 }
