@@ -35,8 +35,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 150, y: 45}
-  m_SizeDelta: {x: 150, y: 50}
+  m_AnchoredPosition: {x: 175, y: 45}
+  m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3679945361204134087
 CanvasRenderer:
@@ -66,7 +66,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sensor (7)
+  m_text: 'Sensor
+
+    (7 cost, 3 energy)
 
 '
   m_isRightToLeft: 0
@@ -564,8 +566,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -150, y: 45}
-  m_SizeDelta: {x: 150, y: 50}
+  m_AnchoredPosition: {x: -175, y: 45}
+  m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8021502166508268715
 CanvasRenderer:
@@ -595,9 +597,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Junior (5)
-
-'
+  m_text: "Junior \n(5 cost, 5 energy)\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -955,6 +955,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Energy: 15
   energySlider: {fileID: 0}
+  energyText: {fileID: 0}
   Rect: {fileID: 759544451923732559}
   Workers:
   - {fileID: 8718990764787421467, guid: 73d27e9ffdf005d41aaecde7c761a035, type: 3}

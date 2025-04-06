@@ -188,7 +188,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 500, y: 500}
+  m_SizeDelta: {x: 650, y: 650}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6664666132861872362
 CanvasRenderer:
@@ -277,7 +277,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 210
+  m_Radius: 270
 --- !u!50 &2959846018732266897
 Rigidbody2D:
   serializedVersion: 5
@@ -768,6 +768,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Energy: 5
   energySlider: {fileID: 3419048040281939684}
+  energyText: {fileID: 4371557129418902216}
   Rect: {fileID: 294824928318167498}
   Visual: {fileID: 5436651360360326651}
   AntCost: 3
@@ -780,6 +781,8 @@ MonoBehaviour:
   Queen: {fileID: 0}
   animations: {fileID: 7754361396722356792}
   earthVFX: {fileID: 6867204924137831479}
+  SensorCollider: {fileID: 8947062374997370425}
+  Sensor: {fileID: 5871054983349251597}
 --- !u!1 &6632374491712677913
 GameObject:
   m_ObjectHideFlags: 0
@@ -1175,6 +1178,14 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4336009748331360467, guid: 2cc2ccb766d86c947a1294be15cf3581, type: 3}
+      propertyPath: m_fontSize
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4336009748331360467, guid: 2cc2ccb766d86c947a1294be15cf3581, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 4440246829717729613, guid: 2cc2ccb766d86c947a1294be15cf3581, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1273,6 +1284,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4371557129418902216 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4336009748331360467, guid: 2cc2ccb766d86c947a1294be15cf3581, type: 3}
+  m_PrefabInstance: {fileID: 37856084978629147}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!224 &4402428202276735830 stripped

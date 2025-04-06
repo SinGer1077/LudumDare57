@@ -48,12 +48,20 @@ public class AntWorker : Ant
     [SerializeField]
     protected ParticleSystem earthVFX;
 
+    [SerializeField]
+    private Collider2D SensorCollider;
+    [SerializeField]
+    private RectTransform Sensor;
+
     public override void Start()
     {
         base.Start();
         InputManager = FindFirstObjectByType<InputManager>();
         FruitManager = FindFirstObjectByType<FruitManager>();
         Interactable = true;
+
+        float coefScale = Mathf.Clamp(9.0f/ Matrix.Size.x, 0.5f, 1.5f);
+        Rect.localScale = new Vector3(coefScale, coefScale, coefScale);
     }
 
     public void SetMatrix(GenerateMatrix matrix, RectTransform parent, Vector2 indexes)

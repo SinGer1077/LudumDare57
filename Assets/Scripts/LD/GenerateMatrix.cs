@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using static UnityEngine.Rendering.DebugUI.Table;
 using UnityEngine.UIElements;
 using System;
+using TMPro;
 
 public class GenerateMatrix : MonoBehaviour
 {    
@@ -21,11 +22,15 @@ public class GenerateMatrix : MonoBehaviour
     [SerializeField]
     private FruitManager FruitManager;
 
+    [SerializeField]
+    private TextMeshProUGUI Text;
+
     private void Awake()
     {
         LevelMatrix = new LevelBlock[(int)Size.x, (int)Size.y];
         FillMatrix();
         CreateGrid();
+        Text.text = "Resolution: " + Size.x + "x" + Size.y;
     }
 
     private void FillMatrix()

@@ -50,11 +50,9 @@ public class FruitManager : MonoBehaviour
         var position = GetRandomPositions((int)Matrix.Size.x, (int)Matrix.Size.y, FruitsCountOnLvl);
         foreach (var poses in position)
         {
-            //Matrix.LevelMatrix[poses.y, poses.x].Fruited = Instantiate(Fruits[Random.Range(0, Fruits.Length)], 
-            //    CalculatePosWithCoord(poses.y, poses.x), Quaternion.identity, Parent);
+            
             Matrix.LevelMatrix[poses.x, poses.y].Fruited = Instantiate(Fruits[Random.Range(0, Fruits.Length)],
                 Matrix.LevelMatrix[poses.x, poses.y].block.transform);
-            Debug.Log(poses.x + " " + poses.y);
         }
     }
 
@@ -62,7 +60,7 @@ public class FruitManager : MonoBehaviour
     {
         List<Vector2Int> allPositions = new List<Vector2Int>();
 
-        for (int x = 0; x < width; x++)
+        for (int x = 1; x < width; x++)
         {
             for (int y = 0; y < height; y++)
             {
