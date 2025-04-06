@@ -393,6 +393,10 @@ PrefabInstance:
       propertyPath: Energy
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 1702773487379411748, guid: e24194edcd60bc741bc1daa8f1e5494a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2200077908192863925, guid: e24194edcd60bc741bc1daa8f1e5494a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 2
@@ -465,9 +469,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7915066881296873407, guid: e24194edcd60bc741bc1daa8f1e5494a, type: 3}
+      propertyPath: m_text
+      value: You WIN! Thank you for playing! The game was developed for Ludum Dare
+        57 by SinGer <3
+      objectReference: {fileID: 0}
     - target: {fileID: 7939145204702427374, guid: e24194edcd60bc741bc1daa8f1e5494a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8636554188964985251, guid: e24194edcd60bc741bc1daa8f1e5494a, type: 3}
+      propertyPath: indexNext
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8636554188964985251, guid: e24194edcd60bc741bc1daa8f1e5494a, type: 3}
       propertyPath: indexThis

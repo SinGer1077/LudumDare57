@@ -853,7 +853,6 @@ GameObject:
   - component: {fileID: 3133706332516433590}
   - component: {fileID: 3673785776900393832}
   - component: {fileID: 6301283406989123209}
-  - component: {fileID: 1438231160063941123}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -922,20 +921,6 @@ MonoBehaviour:
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
   m_ScrollDeltaPerTick: 6
---- !u!114 &1438231160063941123
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3287177419561643642}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f30ff947b44cad741aeb507d5eeb50f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventSystem: {fileID: 3673785776900393832}
-  raycaster: {fileID: 3854725791265642512}
 --- !u!1 &3329934378203448181
 GameObject:
   m_ObjectHideFlags: 0
