@@ -42,7 +42,7 @@ public class AntQueen : Ant, IPointerClickHandler
 
     public override void OnPointerClick(PointerEventData eventData)
     {
-        SummonAnt(AntType.Junior);
+        //SummonAnt(AntType.Junior);
     }
 
     public void SummonAnt(AntType type)
@@ -51,11 +51,18 @@ public class AntQueen : Ant, IPointerClickHandler
         switch (type)
         {
             case AntType.Junior:
-                var ant = Instantiate(Workers[0], transform.position, Quaternion.identity, WorkersContainer);
-                ant.Queen = this;
-                ant.SetMatrix(Matrix, WorkersContainer, new Vector2((int)Matrix.Size.x / 2, 0));
-                ant.SetPath((int)Matrix.Size.x / 2, 0, true);                
-                SpendEnergy(ant.AntCost);
+                var ant1 = Instantiate(Workers[0], transform.position, Quaternion.identity, WorkersContainer);
+                ant1.Queen = this;
+                ant1.SetMatrix(Matrix, WorkersContainer, new Vector2((int)Matrix.Size.x / 2, 0));
+                ant1.SetPath((int)Matrix.Size.x / 2, 0, true);                
+                SpendEnergy(ant1.AntCost);
+                break;
+            case AntType.Senior:
+                var ant2 = Instantiate(Workers[2], transform.position, Quaternion.identity, WorkersContainer);
+                ant2.Queen = this;
+                ant2.SetMatrix(Matrix, WorkersContainer, new Vector2((int)Matrix.Size.x / 2, 0));
+                ant2.SetPath((int)Matrix.Size.x / 2, 0, true);
+                SpendEnergy(ant2.AntCost);
                 break;
         }
     }
