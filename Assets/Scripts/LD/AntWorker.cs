@@ -39,6 +39,9 @@ public class AntWorker : Ant
     [HideInInspector]
     public AntQueen Queen;
 
+    [SerializeField]
+    protected Animator animations;
+
     public override void Start()
     {
         base.Start();

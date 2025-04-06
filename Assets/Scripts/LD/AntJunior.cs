@@ -21,9 +21,15 @@ public class AntJunior : AntWorker
         for (int i = 0; i < xSteps; i++)
         {
             if ((int)IndexesToBegin.x > targetX)
+            {
                 x--;
+                Rect.DORotate(new Vector3(0.0f, 0.0f, 0.0f), 0.0f);
+            }
             else
+            {
                 x++;
+                Rect.DORotate(new Vector3(0.0f, 180.0f, 0.0f), 0.0f);
+            }
 
             Rect.DOLocalMove(CalculatePosWithCoord(x, y), 1.0f);
 
@@ -31,18 +37,26 @@ public class AntJunior : AntWorker
 
             DestroyBlock(Matrix.LevelMatrix[y, x].block);
             CheckForFruit(y ,x);
+            animations.Play("Move");
         }
         for (int i = 0; i < ySteps; i++)
         {
             if ((int)IndexesToBegin.y > targetY)
+            {
                 y--;
+                Rect.DORotate(new Vector3(0.0f, 0.0f, 270.0f), 0.0f);
+            }
             else
+            {
                 y++;
+                Rect.DORotate(new Vector3(0.0f, 0.0f, 90.0f), 0.0f);
+            }
 
             Rect.DOLocalMove(CalculatePosWithCoord(targetX, y), 1.0f);
 
             DestroyBlock(Matrix.LevelMatrix[y, x].block);
             CheckForFruit(y ,x);
+            animations.Play("Move");
             yield return new WaitForSeconds(1.0f);
         }
 
