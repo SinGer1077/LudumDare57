@@ -389,6 +389,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 330585545}
+    - target: {fileID: 1452151965851808328, guid: e24194edcd60bc741bc1daa8f1e5494a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -130
+      objectReference: {fileID: 0}
     - target: {fileID: 3975767263128152470, guid: e24194edcd60bc741bc1daa8f1e5494a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -427,6 +431,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3975767263128152470, guid: e24194edcd60bc741bc1daa8f1e5494a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4327850672201725542, guid: e24194edcd60bc741bc1daa8f1e5494a, type: 3}
+      propertyPath: m_ScreenMatchMode
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5769074147811146785, guid: e24194edcd60bc741bc1daa8f1e5494a, type: 3}

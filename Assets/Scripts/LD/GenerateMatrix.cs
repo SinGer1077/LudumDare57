@@ -25,7 +25,7 @@ public class GenerateMatrix : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI Text;
 
-    private void Awake()
+    private void Start()
     {
         LevelMatrix = new LevelBlock[(int)Size.x, (int)Size.y];
         FillMatrix();
