@@ -19,6 +19,9 @@ public class AntQueen : Ant, IPointerClickHandler
     [SerializeField]
     private Animator animator;
 
+    [SerializeField]
+    private GameProcess Process;
+
     private void FixedUpdate()
     {
         base.SpendEnergy(EnergyByDeltaTime);
@@ -56,6 +59,6 @@ public class AntQueen : Ant, IPointerClickHandler
     public override void Die()
     {
         base.Die();
-        Debug.Log("GAME OVER");
+        Process.LoseLevel();
     }
 }

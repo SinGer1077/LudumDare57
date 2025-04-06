@@ -19,6 +19,9 @@ public class FruitManager : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI fruitCountText;
 
+    [SerializeField]
+    private GameProcess Process;
+
     public void Start()
     {
         fruitCountText.text = FruitsCountOnLvl.ToString();
@@ -32,7 +35,7 @@ public class FruitManager : MonoBehaviour
         Destroy(fruit.gameObject);
         if (FruitsCountOnLvl <= 0)
         {
-            Debug.Log("LEVEL PASSED!");
+            Process.WinLevel();
         }
     }
 
