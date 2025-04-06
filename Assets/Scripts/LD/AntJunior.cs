@@ -20,12 +20,12 @@ public class AntJunior : AntWorker
         int y = currentY;
         for (int i = 0; i < xSteps; i++)
         {
-            if ((int)IndexesToBegin.x > targetX)
+            if (currentX > targetX)
             {
                 x--;
                 Rect.DORotate(new Vector3(0.0f, 0.0f, 0.0f), 0.0f);
             }
-            else
+            if (currentX < targetX)
             {
                 x++;
                 Rect.DORotate(new Vector3(0.0f, 180.0f, 0.0f), 0.0f);
@@ -41,12 +41,12 @@ public class AntJunior : AntWorker
         }
         for (int i = 0; i < ySteps; i++)
         {
-            if ((int)IndexesToBegin.y > targetY)
+            if (currentY > targetY)
             {
                 y--;
                 Rect.DORotate(new Vector3(0.0f, 0.0f, 270.0f), 0.0f);
             }
-            else
+            if (currentY < targetY)
             {
                 y++;
                 Rect.DORotate(new Vector3(0.0f, 0.0f, 90.0f), 0.0f);

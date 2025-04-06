@@ -20,7 +20,8 @@ public class AntWorker : Ant
     public float Strength;
 
     protected Vector2 IndexesToBegin;
-    protected int currentX, currentY;
+    [HideInInspector]
+    public int currentX, currentY;
 
     private bool Chosen;
 
@@ -41,6 +42,11 @@ public class AntWorker : Ant
 
     [SerializeField]
     protected Animator animations;
+
+    [SerializeField]
+    protected ParticleSystem earthVFX;
+    [SerializeField]
+    protected Transform earthVFXParent;
 
     public override void Start()
     {
@@ -85,6 +91,7 @@ public class AntWorker : Ant
     {
         if (!block.Destroyed)
         {
+            Instantiate(earthVFX, earthVFXParent);
             block.ChangeDurability(Strength);
             SpendEnergy(1.0f);
         }

@@ -25,6 +25,9 @@ public class Block : MonoBehaviour, IPointerClickHandler
     [HideInInspector]
     public int x, y;
 
+    [SerializeField]
+    private Image Path;
+
     private void Start()
     {
         DefaultDurability = Durability;
@@ -38,7 +41,10 @@ public class Block : MonoBehaviour, IPointerClickHandler
             if (InputManager.CurrentBlock != this)
             {
                 if (InputManager.CurrentBlock != null)
+                {
                     InputManager.CurrentBlock.clickCount = 0;
+                    InputManager.PathChosen();
+                }
                 InputManager.CurrentBlock = this;
             }
             else
@@ -47,11 +53,20 @@ public class Block : MonoBehaviour, IPointerClickHandler
             }
 
             clickCount++;
-            if (clickCount == 2)
+            if (clickCount == 1)
             {
-                InputManager.CurrentBlock.clickCount = 0;
                 if (InputManager.CurrentChosenAnt != null)
                 {
+                    InputManager.CreatePath(this);
+                }
+            }
+
+            if (clickCount == 2)
+            {
+                InputManager.CurrentBlock.clickCount = 0;                
+                if (InputManager.CurrentChosenAnt != null)
+                {
+                    InputManager.PathChosen();
                     InputManager.CurrentChosenAnt.SetPath(y ,x, false);
                 }
             }
@@ -74,5 +89,15 @@ public class Block : MonoBehaviour, IPointerClickHandler
         var color = image.color;
         color.a = 0.0f;
         image.color = color;
+    }
+
+    public void SetPath()
+    {
+        Path.gameObject.SetActive(true);
+    }
+
+    public void UnsetPath()
+    {
+        Path.gameObject.SetActive(false);
     }
 }
