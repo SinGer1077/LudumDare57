@@ -389,10 +389,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 330585545}
-    - target: {fileID: 1452151965851808328, guid: e24194edcd60bc741bc1daa8f1e5494a, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -130
-      objectReference: {fileID: 0}
     - target: {fileID: 3975767263128152470, guid: e24194edcd60bc741bc1daa8f1e5494a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -433,14 +429,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4327850672201725542, guid: e24194edcd60bc741bc1daa8f1e5494a, type: 3}
-      propertyPath: m_ScreenMatchMode
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5769074147811146785, guid: e24194edcd60bc741bc1daa8f1e5494a, type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 330585545}
     - target: {fileID: 5947104795300973507, guid: e24194edcd60bc741bc1daa8f1e5494a, type: 3}
       propertyPath: m_Camera
       value: 
@@ -448,14 +436,6 @@ PrefabInstance:
     - target: {fileID: 6635738031320712036, guid: e24194edcd60bc741bc1daa8f1e5494a, type: 3}
       propertyPath: m_Name
       value: LevelSetup
-      objectReference: {fileID: 0}
-    - target: {fileID: 7939145204702427374, guid: e24194edcd60bc741bc1daa8f1e5494a, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8636554188964985251, guid: e24194edcd60bc741bc1daa8f1e5494a, type: 3}
-      propertyPath: indexNext
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
