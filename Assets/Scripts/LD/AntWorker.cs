@@ -53,6 +53,9 @@ public class AntWorker : Ant
     [SerializeField]
     private RectTransform Sensor;
 
+    [SerializeField]
+    private AudioSource DigSound;
+
     public override void Start()
     {
         base.Start();
@@ -100,6 +103,7 @@ public class AntWorker : Ant
         if (!block.Destroyed)
         {
             earthVFX.Play();
+            DigSound.Play();
             block.ChangeDurability(Strength);
             SpendEnergy(1.0f);
         }
