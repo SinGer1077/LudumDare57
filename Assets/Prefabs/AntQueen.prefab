@@ -614,6 +614,7 @@ MonoBehaviour:
   WorkersContainer: {fileID: 0}
   Matrix: {fileID: 0}
   EnergyByDeltaTime: 0.001
+  animator: {fileID: 3798222405312778840}
 --- !u!1 &6527973326697702437
 GameObject:
   m_ObjectHideFlags: 0

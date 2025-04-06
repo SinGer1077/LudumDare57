@@ -16,9 +16,21 @@ public class AntQueen : Ant, IPointerClickHandler
     [SerializeField]
     private float EnergyByDeltaTime;
 
+    [SerializeField]
+    private Animator animator;
+
     private void FixedUpdate()
     {
-        SpendEnergy(EnergyByDeltaTime);
+        base.SpendEnergy(EnergyByDeltaTime);
+    }
+
+    public override void SpendEnergy(float value)
+    {
+        base.SpendEnergy(value);
+        if (value < 0)
+        {
+            animator.Play("QueenHappy");
+        }
     }
 
     public override void OnPointerClick(PointerEventData eventData)

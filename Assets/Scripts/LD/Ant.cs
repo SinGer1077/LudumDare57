@@ -16,7 +16,7 @@ public class Ant : MonoBehaviour, IPointerClickHandler
         DefaultEnergy = Energy;
     }
 
-    public void SpendEnergy(float value)
+    public virtual void SpendEnergy(float value)
     {
         Energy = Mathf.Clamp(Energy - value, 0.0f, DefaultEnergy);
         energySlider.fillAmount = Energy / DefaultEnergy;
