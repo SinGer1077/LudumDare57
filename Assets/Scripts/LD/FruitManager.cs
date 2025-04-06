@@ -29,10 +29,10 @@ public class FruitManager : MonoBehaviour
 
     public void FruitFounded(Fruit fruit)
     {
+        fruit.FruitTaken();
         FruitsCountOnLvl--;
         fruitCountText.text = FruitsCountOnLvl.ToString();
         fruitCountText.rectTransform.DOJump(fruitCountText.rectTransform.position, 1.0f, 3, 1.5f);
-        Destroy(fruit.gameObject);
         if (FruitsCountOnLvl <= 0)
         {
             Process.WinLevel();

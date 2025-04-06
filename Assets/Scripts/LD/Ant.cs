@@ -28,7 +28,6 @@ public class Ant : MonoBehaviour, IPointerClickHandler
 
     public virtual void Die()
     {
-        Debug.Log("Ant is dead(");
         Destroy(gameObject);
     }
 

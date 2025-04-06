@@ -36,8 +36,8 @@ public class Block : MonoBehaviour, IPointerClickHandler
 
     public virtual void OnPointerClick(PointerEventData eventData)
     {
-        if (eventData.button == PointerEventData.InputButton.Right)
-        {
+        //if (eventData.button == PointerEventData.InputButton.Right)
+        //{
             if (InputManager.CurrentBlock != this)
             {
                 if (InputManager.CurrentBlock != null)
@@ -70,7 +70,7 @@ public class Block : MonoBehaviour, IPointerClickHandler
                     InputManager.CurrentChosenAnt.SetPath(y ,x, false);
                 }
             }
-        }
+        //}
     }
 
     public void ChangeDurability(float value)

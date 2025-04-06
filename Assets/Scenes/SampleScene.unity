@@ -1538,7 +1538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 437fb4ec1cb34ba4ca948af422ddeaa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Size: {x: 5, y: 5}
+  Size: {x: 9, y: 9}
   BlockPossibleTypes:
   - {fileID: 6690427091293030854, guid: 715371a42148210479bdd6da3138328e, type: 3}
   Grid: {fileID: 899337564}
@@ -2750,26 +2750,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2247519081457958117, guid: 9e0bf8aa32c410947a04e98cda3fecea, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4376333737274296827, guid: 9e0bf8aa32c410947a04e98cda3fecea, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4376333737274296827, guid: 9e0bf8aa32c410947a04e98cda3fecea, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4376333737274296827, guid: 9e0bf8aa32c410947a04e98cda3fecea, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4956464448480487181, guid: 9e0bf8aa32c410947a04e98cda3fecea, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5490366721656639260, guid: 9e0bf8aa32c410947a04e98cda3fecea, type: 3}
       propertyPath: Matrix
       value: 
@@ -2779,10 +2759,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 322682281}
     - target: {fileID: 5490366721656639260, guid: 9e0bf8aa32c410947a04e98cda3fecea, type: 3}
-      propertyPath: SpawnPoint
-      value: 
-      objectReference: {fileID: 162158195}
-    - target: {fileID: 5490366721656639260, guid: 9e0bf8aa32c410947a04e98cda3fecea, type: 3}
       propertyPath: energySlider
       value: 
       objectReference: {fileID: 500325809}
@@ -2790,26 +2766,6 @@ PrefabInstance:
       propertyPath: WorkersContainer
       value: 
       objectReference: {fileID: 1859834995}
-    - target: {fileID: 5490366721656639260, guid: 9e0bf8aa32c410947a04e98cda3fecea, type: 3}
-      propertyPath: Workers.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5490366721656639260, guid: 9e0bf8aa32c410947a04e98cda3fecea, type: 3}
-      propertyPath: 'Workers.Array.data[0]'
-      value: 
-      objectReference: {fileID: 8718990764787421467, guid: 73d27e9ffdf005d41aaecde7c761a035, type: 3}
-    - target: {fileID: 5962233338459207052, guid: 9e0bf8aa32c410947a04e98cda3fecea, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5962233338459207052, guid: 9e0bf8aa32c410947a04e98cda3fecea, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5962233338459207052, guid: 9e0bf8aa32c410947a04e98cda3fecea, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5981865565474220054, guid: 9e0bf8aa32c410947a04e98cda3fecea, type: 3}
       propertyPath: m_Name
       value: AntQueen

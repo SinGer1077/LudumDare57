@@ -609,11 +609,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Energy: 15
   energySlider: {fileID: 0}
-  Workers: []
+  Rect: {fileID: 759544451923732559}
+  Workers:
+  - {fileID: 8718990764787421467, guid: 73d27e9ffdf005d41aaecde7c761a035, type: 3}
   WorkersContainer: {fileID: 0}
   Matrix: {fileID: 0}
   EnergyByDeltaTime: 0.001
   animator: {fileID: 3798222405312778840}
+  Process: {fileID: 0}
 --- !u!1 &6527973326697702437
 GameObject:
   m_ObjectHideFlags: 0

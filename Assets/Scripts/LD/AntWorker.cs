@@ -138,13 +138,22 @@ public class AntWorker : Ant
 
     public void CheckForFruit(int x, int y)
     {
-        Debug.Log(x + " " + y + " " + Matrix.LevelMatrix[x, y].Fruited);
-        if (Matrix.LevelMatrix[x, y].Fruited != null)
+        if (Matrix.LevelMatrix[x, y].Fruited != null && Matrix.LevelMatrix[x, y].Fruited.Taken == false)
         {
-            Debug.Log("FOUNDED!!!");
             Queen.SpendEnergy(-Matrix.LevelMatrix[x, y].Fruited.EnergyRestore);
             FruitManager.FruitFounded(Matrix.LevelMatrix[x, y].Fruited);
         }
+    }
+
+    public override void Die()
+    {
+        Rect.DOKill();
+        animations.SetBool("Dead", true);
+        Rect.DORotate(new Vector3(0.0f, 0.0f, 180.0f), 1.0f);
+        DOVirtual.DelayedCall(1.0f, () =>
+        {
+            base.Die();
+        });
     }
 
 }

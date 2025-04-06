@@ -1,9 +1,13 @@
+using DG.Tweening;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class AntQueen : Ant, IPointerClickHandler
 {
+    [SerializeField]
+    private RectTransform Rect;
+
     [SerializeField]
     private AntWorker[] Workers;
 
@@ -58,7 +62,13 @@ public class AntQueen : Ant, IPointerClickHandler
 
     public override void Die()
     {
-        base.Die();
+        //animator.SetBool("Dead", true);
+        animator.Play("QueenDeath");
+        //Rect.DORotate(new Vector3(0.0f, 0.0f, 180.0f), 1.0f);
         Process.LoseLevel();
+        //DOVirtual.DelayedCall(1.0f, () =>
+        //{
+            //base.Die();
+        //});
     }
 }

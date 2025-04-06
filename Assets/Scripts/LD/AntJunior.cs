@@ -10,6 +10,7 @@ public class AntJunior : AntWorker
         int byY = Mathf.Abs(currentY - targetY);
 
         Interactable = false;
+        animations.SetBool("Moving", true);
 
         StartCoroutine(MoveInSteps(byX, byY));
     }
@@ -61,6 +62,7 @@ public class AntJunior : AntWorker
             yield return new WaitForSeconds(1.0f);
         }
         currentX = targetX;  currentY = targetY;
-        Interactable = true;        
+        Interactable = true;
+        animations.SetBool("Moving", false);
     }
 }
