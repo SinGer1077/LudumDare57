@@ -1,4 +1,6 @@
+using DG.Tweening;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class FruitManager : MonoBehaviour
@@ -14,10 +16,19 @@ public class FruitManager : MonoBehaviour
     [SerializeField]
     private RectTransform Parent;
 
+    [SerializeField]
+    private TextMeshProUGUI fruitCountText;
+
+    public void Start()
+    {
+        fruitCountText.text = FruitsCountOnLvl.ToString();
+    }
+
     public void FruitFounded(Fruit fruit)
     {
         FruitsCountOnLvl--;
-        Debug.Log(FruitsCountOnLvl + " counts");
+        fruitCountText.text = FruitsCountOnLvl.ToString();
+        fruitCountText.rectTransform.DOJump(fruitCountText.rectTransform.position, 1.0f, 3, 1.5f);
         Destroy(fruit.gameObject);
         if (FruitsCountOnLvl <= 0)
         {

@@ -755,7 +755,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 437fb4ec1cb34ba4ca948af422ddeaa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Size: {x: 15, y: 15}
+  Size: {x: 7, y: 7}
   BlockPossibleTypes:
   - {fileID: 6690427091293030854, guid: 715371a42148210479bdd6da3138328e, type: 3}
   Grid: {fileID: 899337564}
