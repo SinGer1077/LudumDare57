@@ -47,8 +47,6 @@ public class AntWorker : Ant
 
     [SerializeField]
     protected ParticleSystem earthVFX;
-    [SerializeField]
-    protected Transform earthVFXParent;
 
     public override void Start()
     {
@@ -93,7 +91,7 @@ public class AntWorker : Ant
     {
         if (!block.Destroyed)
         {
-            Instantiate(earthVFX, earthVFXParent);
+            earthVFX.Play();
             block.ChangeDurability(Strength);
             SpendEnergy(1.0f);
         }
