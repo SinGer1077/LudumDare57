@@ -88,7 +88,7 @@ public class Block : MonoBehaviour, IPointerClickHandler
 
         var color = image.color;
         color.a = 0.0f;
-        image.color = color;
+        image.color = color;        
     }
 
     public void SetPath()

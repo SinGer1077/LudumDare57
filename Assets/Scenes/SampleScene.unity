@@ -308,7 +308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5660378, g: 0.42185828, b: 0.42185828, a: 1}
+  m_Color: {r: 0.408805, g: 0.3282079, b: 0.26868, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -641,7 +641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 437fb4ec1cb34ba4ca948af422ddeaa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Size: {x: 9, y: 9}
+  Size: {x: 15, y: 15}
   BlockPossibleTypes:
   - {fileID: 6690427091293030854, guid: 715371a42148210479bdd6da3138328e, type: 3}
   Grid: {fileID: 899337564}
@@ -738,6 +738,7 @@ GameObject:
   - component: {fileID: 1298734619}
   - component: {fileID: 1298734618}
   - component: {fileID: 1298734617}
+  - component: {fileID: 1298734620}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -806,6 +807,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1298734620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298734616}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f30ff947b44cad741aeb507d5eeb50f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventSystem: {fileID: 1298734618}
+  raycaster: {fileID: 188654978}
 --- !u!224 &1693357329 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 759544451923732559, guid: 9e0bf8aa32c410947a04e98cda3fecea, type: 3}

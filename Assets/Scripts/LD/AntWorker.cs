@@ -8,6 +8,8 @@ public class AntWorker : Ant
 {
     [SerializeField]
     protected RectTransform Rect;
+    [SerializeField]
+    protected RectTransform Visual;
 
     public float AntCost;
 
@@ -123,7 +125,7 @@ public class AntWorker : Ant
         if (flag)
         {
             var aura = Aura.color;
-            aura.a = 1.0f;
+            aura.a = 0.5f;
             Aura.color = aura;
         }
         else
